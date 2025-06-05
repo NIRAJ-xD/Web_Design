@@ -1,8 +1,16 @@
 :root{
+    --base-color:rgb(245, 245, 245);
     --primary-color:white;
-    --text-color:rgb(0, 0, 0);
+    --text-color:black;
     --accent-color:rgb(222, 222, 222);
-    --hover-color:hsla(0, 0%, 0%, 0.785);
+    --hover-color:#000000c8;
+}
+.darkmode{
+    --base-color:rgb(37, 37, 37);
+    --primary-color:black;
+    --text-color:white;
+    --accent-color:rgb(42, 42, 42);
+    --hover-color:hsla(0, 0%, 97%, 0.785);
 }
 *{
     margin: 0;
@@ -14,7 +22,7 @@ html{
     color: var(--text-color);
 }
 body{
-
+    color: var(--text-color);
     background-color: var(--accent-color);
 }
 .container{
@@ -22,13 +30,13 @@ body{
     flex-direction: column;
     min-height: 94dvh;
     min-height: 94vh;
-    background-color: var(--primary-color);
+    background-color: var(--base-color);
     margin: 2rem;
     border: none;
     border-radius: 1rem;
 }
 nav{
-    background-color: var(--primary-color);
+    background-color: var(--base-color);
     border: none;
     padding: 0 1rem;
     border-radius: 1rem;
@@ -82,7 +90,7 @@ p{
     gap: 1rem;
 }
 .service-card {
-    background-color: #ececec;
+    background-color: var(--accent-color);
     padding: 1rem;
     border-radius: 0.5rem;
     transition: 400ms ease;
@@ -100,12 +108,13 @@ h3,h4{
     font-weight: bold;
 }
 .cta{
-    padding: 8px;
+    margin: 6px;
 }
 button{
+    background-color: var(--accent-color);
     font-size: 15px;
     padding: 0.8rem;
-    border: 1px solid var(--text-color);
+    border: none;
     border-radius: 15px;
     cursor: pointer;
     transition: 200ms ease-in;
