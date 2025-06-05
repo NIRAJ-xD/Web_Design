@@ -3,13 +3,13 @@
     --primary-color:white;
     --text-color:black;
     --accent-color:rgb(222, 222, 222);
-    --hover-color:#000000c8;
+    --hover-color:#141414c8;
 }
 .darkmode{
-    --base-color:rgb(37, 37, 37);
+    --base-color:rgb(36, 36, 36);
     --primary-color:black;
     --text-color:white;
-    --accent-color:rgb(42, 42, 42);
+    --accent-color:rgb(62, 62, 62);
     --hover-color:hsla(0, 0%, 97%, 0.785);
 }
 *{
@@ -34,6 +34,40 @@ body{
     margin: 2rem;
     border: none;
     border-radius: 1rem;
+}
+#theme-switch{
+    height: 50px;
+    width: 50px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--hover-color);
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 8rem;
+    right: 4rem;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+#theme-switch:hover{
+    background-color: var(--accent-color);
+}
+#theme-switch svg{
+    fill: var(--base-color);
+}
+#theme-switch:hover svg{
+    fill: var(--hover-color);
+}
+#theme-switch .dark-icon {
+    display: none;
+}
+.darkmode #theme-switch .light-icon {
+    display: none;
+}
+.darkmode #theme-switch .dark-icon {
+    display: block;
 }
 nav{
     background-color: var(--base-color);
@@ -112,6 +146,7 @@ h3,h4{
 }
 button{
     background-color: var(--accent-color);
+    color: var(--text-color);
     font-size: 15px;
     padding: 0.8rem;
     border: none;
@@ -141,6 +176,10 @@ button:hover{
     }
     .about-services {
         flex-direction: column;
+    }
+    #theme-switch{
+        top: 4rem;
+        right: 4rem;
     }
     .cta{
         display: flex;
